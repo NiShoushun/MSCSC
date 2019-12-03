@@ -1,4 +1,5 @@
 use MSCSA
+go
 
 create table 学生
 (
@@ -20,8 +21,20 @@ create table 社团
 	成立日期 datetime not NULL,
 	当前人数 int not NULL,
 	最大人数 int not NULL,
-	是否通过审核 bit not NULL
 )
+
+create table 待审核社团
+(
+	社团名称 nvarchar(20) not NULL,
+	社团创始人 nvarchar(10) not NULL,
+	社团简介 text,
+	申请日期 datetime not NULL,
+	是否通过 bit
+)
+
+--insert into 待审核社团 values('1','1','简介',getDate(),1)
+--select convert(char(10),申请日期,120) from 待审核社团
+--delete from 待审核社团
 
 create table 社团成员
 (
@@ -51,5 +64,9 @@ create table 待审核社团成员
 	学号 nvarchar(10) not NULL,
 	社团ID nvarchar(10) not NULL,
 	申请时间 datetime not NUll,
+	是否通过 bit not NULL
 )
 
+alter table 待审核社团成员 add 是否通过 bit not NULL
+
+go
