@@ -1,4 +1,4 @@
-use MSCSA
+	use MSCSA
 go
 
 create table Ñ§Éú
