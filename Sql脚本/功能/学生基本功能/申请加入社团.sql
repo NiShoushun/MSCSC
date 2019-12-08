@@ -1,5 +1,8 @@
 --申请加入社团功能
 
+use MSCSA
+go
+
 Create Proc  ApplyJoinCommunity
 @ComID nvarchar(10),@StuNo nvarchar(10),@加入说明 text
 AS 

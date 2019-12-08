@@ -1,4 +1,6 @@
 --学生退出社团功能
+use MSCSA
+go
 
 Create Proc QuitCom
 @ComID nvarchar(10),@StuNo nvarchar(10)
