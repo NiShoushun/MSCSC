@@ -1,69 +1,67 @@
-use MSCSA
+use MSCSC
 
-CREATE TABLE [dbo].[Ñ§Éú](
-	[Ñ§ºÅ] [nvarchar](10) NOT NULL,
-	[ĞÕÃû] [nvarchar](10) NOT NULL,
-	[ÄêÁä] [int] NOT NULL,
-	[ĞÔ±ğ] [nvarchar](2) NOT NULL,
-	[ÔºÏµ] [nvarchar](20) NOT NULL,
-	[Äê¼¶] [int] NOT NULL,
-	[µç»°ºÅÂë] [nvarchar](12) NULL
+CREATE TABLE [dbo].[å­¦ç”Ÿ](
+	[å­¦å·] [nvarchar](10) NOT NULL,
+	[å§“å] [nvarchar](10) NOT NULL,
+	[å¹´é¾„] [int] NOT NULL,
+	[æ€§åˆ«] [nvarchar](2) NOT NULL,
+	[é™¢ç³»] [nvarchar](20) NOT NULL,
+	[å¹´çº§] [int] NOT NULL,
+	[ç”µè¯å·ç ] [nvarchar](12) NULL
 ) ON [PRIMARY]
 
 
-CREATE TABLE [dbo].[ÉçÍÅ](
-	[ÉçÍÅID] [nvarchar](10) NOT NULL,
-	[ÉçÍÅÃû³Æ] [nvarchar](20) NOT NULL,
-	[ÉçÍÅ´´Ê¼ÈË] [nvarchar](10) NOT NULL,
-	[ÉçÍÅ¼ò½é] [text] NULL,
-	[³ÉÁ¢ÈÕÆÚ] [datetime] NOT NULL,
-	[µ±Ç°ÈËÊı] [int] NOT NULL,
-	[×î´óÈËÊı] [int] NOT NULL
+CREATE TABLE [dbo].[ç¤¾å›¢](
+	[ç¤¾å›¢ID] [nvarchar](10) NOT NULL,
+	[ç¤¾å›¢åç§°] [nvarchar](20) NOT NULL,
+	[ç¤¾å›¢åˆ›å§‹äºº] [nvarchar](10) NOT NULL,
+	[ç¤¾å›¢ç®€ä»‹] [text] NULL,
+	[æˆç«‹æ—¥æœŸ] [datetime] NOT NULL,
+	[å½“å‰äººæ•°] [int] NOT NULL,
+	[æœ€å¤§äººæ•°] [int] NOT NULL
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 
 
-CREATE TABLE [dbo].[´ıÉóºËÉçÍÅ](
-	[ÉçÍÅÃû³Æ] [nvarchar](20) NOT NULL,
-	[ÉçÍÅ´´Ê¼ÈË] [nvarchar](10) NOT NULL,
-	[ÉçÍÅ¼ò½é] [text] NULL,
-	[ÉêÇëÈÕÆÚ] [datetime] NOT NULL,
-	[ÊÇ·ñÍ¨¹ı] [bit] NULL
+CREATE TABLE [dbo].[å¾…å®¡æ ¸ç¤¾å›¢](
+	[ç¤¾å›¢åç§°] [nvarchar](20) NOT NULL,
+	[ç¤¾å›¢åˆ›å§‹äºº] [nvarchar](10) NOT NULL,
+	[ç¤¾å›¢ç®€ä»‹] [text] NULL,
+	[ç”³è¯·æ—¥æœŸ] [datetime] NOT NULL,
+	[æ˜¯å¦é€šè¿‡] [bit] NULL
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 
---insert into ´ıÉóºËÉçÍÅ values('1','1','¼ò½é',getDate(),1)
---select convert(char(10),ÉêÇëÈÕÆÚ,120) from ´ıÉóºËÉçÍÅ
---delete from ´ıÉóºËÉçÍÅ
+--insert into å¾…å®¡æ ¸ç¤¾å›¢ values('1','1','ç®€ä»‹',getDate(),1)
+--select convert(char(10),ç”³è¯·æ—¥æœŸ,120) from å¾…å®¡æ ¸ç¤¾å›¢
+--delete from å¾…å®¡æ ¸ç¤¾å›¢
 
 
-CREATE TABLE [dbo].[ÉçÍÅ³ÉÔ±](
-	[Ñ§ºÅ] [nvarchar](10) NOT NULL,
-	[ÉçÍÅID] [nvarchar](10) NOT NULL,
-	[³ÉÔ±ID] [nvarchar](10) NOT NULL,
-	[¼ÓÈëÊ±¼ä] [datetime] NOT NULL,
-	[È¨ÏŞ] [nvarchar](5) NOT NULL
+CREATE TABLE [dbo].[ç¤¾å›¢æˆå‘˜](
+	[å­¦å·] [nvarchar](10) NOT NULL,
+	[ç¤¾å›¢ID] [nvarchar](10) NOT NULL,
+	[æˆå‘˜ID] [nvarchar](10) NOT NULL,
+	[åŠ å…¥æ—¶é—´] [datetime] NOT NULL,
+	[æƒé™] [nvarchar](5) NOT NULL
 ) ON [PRIMARY]
 
 
-CREATE TABLE [dbo].[ÍË»á³ÉÔ±](
-	[Ñ§ºÅ] [nvarchar](10) NOT NULL,
-	[ÉçÍÅID] [nvarchar](10) NOT NULL,
-	[ÍË³öÊ±¼ä] [datetime] NOT NULL,
-	[ÁªÏµ·½Ê½] [text] NULL
+CREATE TABLE [dbo].[é€€ä¼šæˆå‘˜](
+	[å­¦å·] [nvarchar](10) NOT NULL,
+	[ç¤¾å›¢ID] [nvarchar](10) NOT NULL,
+	[é€€å‡ºæ—¶é—´] [datetime] NOT NULL,
+	[è”ç³»æ–¹å¼] [text] NULL
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 
 
-CREATE TABLE [dbo].[´ıÉóºËÉçÍÅ³ÉÔ±](
-	[Ñ§ºÅ] [nvarchar](10) NOT NULL,
-	[ÉçÍÅID] [nvarchar](10) NOT NULL,
-	[ÉêÇëÊ±¼ä] [datetime] NOT NULL,
-	[ÊÇ·ñÍ¨¹ı] [bit] NOT NULL,
-	[¼ÓÈëËµÃ÷] [text] NULL
+CREATE TABLE [dbo].[å¾…å®¡æ ¸ç¤¾å›¢æˆå‘˜](
+	[å­¦å·] [nvarchar](10) NOT NULL,
+	[ç¤¾å›¢ID] [nvarchar](10) NOT NULL,
+	[ç”³è¯·æ—¶é—´] [datetime] NOT NULL,
+	[æ˜¯å¦é€šè¿‡] [bit] NOT NULL,
+	[åŠ å…¥è¯´æ˜] [text] NULL
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 
 
-CREATE TABLE [dbo].[µÇÂ½±í](
-	[Ñ§ºÅ] [nvarchar](10) NOT NULL,
-	[ÃÜÂë] [nvarchar](32) NOT NULL
+CREATE TABLE [dbo].[ç™»é™†è¡¨](
+	[å­¦å·] [nvarchar](10) NOT NULL,
+	[å¯†ç ] [nvarchar](32) NOT NULL
 ) ON [PRIMARY]
-
-

@@ -1,4 +1,4 @@
-use MSCSA
+use MSCSC
 go
 
 --申请加入社团功能

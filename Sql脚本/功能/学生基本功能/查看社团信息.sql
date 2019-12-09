@@ -1,5 +1,5 @@
 --学生查看社团信息功能
-use MSCSA
+use MSCSC
 go
 
 Create Proc ViewComInfo

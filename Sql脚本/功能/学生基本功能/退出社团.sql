@@ -1,5 +1,5 @@
 --学生退出社团功能
-use MSCSA
+use MSCSC
 go
 
 Create Proc QuitCom
