@@ -1,0 +1,13 @@
+{
+    "sqltools.connections": [
+        {
+            "database": "MSCSA",
+            "dialect": "MSSQL",
+            "name": "MSSQL",
+            "password": "assinscreed162",
+            "port": 1433,
+            "server": "localhost",
+            "username": "18724787072"
+        }
+    ]
+}
