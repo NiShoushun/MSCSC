@@ -10,7 +10,7 @@ BEGIN
     DELETE FROM 社团成员 WHERE 学号 = @StuNo
     DELETE FROM 退会成员 WHERE 学号 = @StuNo
     DELETE FROM 登陆表 WHERE 学号 = @StuNo
-    --将待审核社团中所有社团创始人为被删除学生的人且未通过审核的学生记录清除掉
+    --将待审核社团中所有社团创始人为被删除学生的人且未通过审核的社团申请记录清除掉
     DELETE FROM 待审核社团 WHERE 社团创始人 = @StuNo AND 是否通过 = 'FALSE'
 END
 
