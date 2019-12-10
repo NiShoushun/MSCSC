@@ -39,3 +39,4 @@ BEGIN
     WHERE 社团成员.学号 = @StuNo 
     AND 社团成员.社团ID = 社团.社团ID
 END
+

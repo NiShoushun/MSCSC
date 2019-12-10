@@ -24,8 +24,8 @@ AS
 BEGIN
     DECLARE @StuNo NVARCHAR(10)
     SELECT @StuNO = 学号 FROM DELETED 
-    --使用内置函数HashBytes将MD5处理后的‘123456’插入到登陆表中
-    INSERT INTO 登录表 (学号,密码) VALUES(@StuNO,HashBytes('MD5','123456'))
+    --自动添加默认密码值
+    INSERT INTO 登录表 (学号) VALUES(@StuNO)
 END
 
 go
