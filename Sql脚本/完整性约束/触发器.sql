@@ -27,3 +27,20 @@ BEGIN
     --使用内置函数HashBytes将MD5处理后的‘123456’插入到登陆表中
     INSERT INTO 登录表 (学号,密码) VALUES(@StuNO,HashBytes('MD5','123456'))
 END
+
+go
+
+--退出社团时将退出信息插入到退会成员表中
+CREATE TRIGGER DelMember
+ON 社团成员
+AFTER DELETE
+AS
+BEGIN
+    DECLARE @StuNo NVARCHAR(10)
+    DECLARE @ComID NVARCHAR(10)
+    DECLARE @TelNum NVARCHAR(12)
+    SELECT @StuNO = 学号,@ComID = 社团ID FROM DELETED 
+    SELECT @TelNum = 电话号码 FROM 学生 WHERE 学号 = @StuNo
+    --将删除信息插入到退会成员表
+    INSERT INTO 退会成员 (学号,社团ID,退出时间,联系方式) VALUES(@StuNO,@ComID,GETDATE(),@TelNum)
+END
