@@ -10,9 +10,9 @@ BEGIN
     DECLARE @Count INT
     SELECT @Count = COUNT(*) FROM 社团成员 WHERE 学号 = @StuNo AND 社团ID = @ComID AND 权限 = 'admin'
     IF @Count = 0
-    SET @IsAdmin = 0
+        SET @IsAdmin = 0
     ELSE
-    SET @IsAdmin = 1
+        SET @IsAdmin = 1
     RETURN @IsAdmin
 END
 

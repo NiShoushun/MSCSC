@@ -2,7 +2,7 @@ USE MSCSC
 
 go
 
-CREATE PROC ApplyToCreateCom
+Create PROC ApplyToCreateCom
 @StuNo nvarchar(10),
 @ConName nvarchar(20),
 @ComInfo text
@@ -17,7 +17,7 @@ BEGIN
     IF @Count > 0
     BEGIN
         Set @Msg = '已经申请过了'
-        Select @Msg 返回信息
+        Select @Msg '系统通知'
     END
     --之前未申请
     ELSE
@@ -26,7 +26,7 @@ BEGIN
         --将学生申请信息插入到待审核社团成员表中
         Insert Into 待审核社团 (社团名称,社团创始人,社团简介,申请日期,是否通过)
         values (@ConName,@StuNo,@ComInfo,GETDATE(),'FALSE')
-        Select @Msg 返回信息
+        Select @Msg '系统通知'
     END
 END
 

@@ -17,12 +17,12 @@ BEGIN
     BEGIN
         UPDATE 登录表 SET 密码 = HashBytes('MD5',@NewPW) WHERE 学号 = @StuNo
         SET @Msg = '密码修改成功'
-        SELECT @MSG '返回信息'
+        SELECT @MSG '系统通知'
     END
     ELSE
     BEGIN
         SET @Msg = '密码错误，修改失败'
-        SELECT @MSG '返回信息'
+        SELECT @MSG '系统通知'
     END
 END
 

@@ -8,4 +8,11 @@ GO
 --将默认密码绑定到登陆表密码中
 sp_bindefault '默认密码','登陆表.密码'
 
+--添加社团人数检查
+ALter Table 社团 ADD CONSTRAINT Check_Num CHECK (
+    当前人数 <= 最大人数 
+    AND  最大人数 > 0
+    AND 当前人数 >= 0
+)
+
 
