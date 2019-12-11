@@ -11,10 +11,7 @@ BEGIN
     SELECT 学生.学号,姓名,成员ID,电话号码,权限,加入时间 from 社团成员,学生 
     Where 社团ID = @ComID AND 学生.学号 = 社团成员.学号
 END
-
-
 go
-
 
 --学生查看所有社团信息功能
 Create Proc ViewAllComInfo
