@@ -15,10 +15,9 @@ go
 
 --学生查看所有社团信息功能
 Create Proc ViewAllComInfo
-@ComID nvarchar(10)
 AS 
 BEGIN
-    SELECT 社团ID,社团名称,成立日期,当前人数 from 社团 Where 社团ID = @ComID
+    SELECT 社团ID,社团名称,成立日期,当前人数 from 社团 
 END
 
 
