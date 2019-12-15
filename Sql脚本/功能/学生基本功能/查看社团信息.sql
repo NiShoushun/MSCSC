@@ -28,9 +28,9 @@ CREATE PROC ShowSelfInfo
 AS 
 BEGIN
     --选择学生信息
-    SELECT * FROM 学生
+    SELECT * FROM 学生 WHERE 学号 = @StuNO
     --选择所加入社团信息
-    SELECT 社团.社团ID,社团.社团ID ,社团成员.成员ID FROM 社团 ,社团成员 
+    SELECT 社团.社团ID,社团名称 ,成员ID,权限 FROM 社团 ,社团成员 
     WHERE 社团成员.学号 = @StuNo 
     AND 社团成员.社团ID = 社团.社团ID
 END
