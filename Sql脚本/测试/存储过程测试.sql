@@ -1,10 +1,3 @@
-verifyUser '2016010002' ,'123456' --NO
-GO
-setPasswd '2016010002' ,'123456','123456' --NO
-GO
-setTelNum '2016010002','18724787072'
-GO
-ShowSelfInfo '2016010002'
 --社团创建申请
 GO
 ApplyToCreateCom '2016010002','书法社','书法练习' --YES
@@ -37,12 +30,36 @@ GO
 --学生操作
 ViewAllComInfo --YES
 GO
-ViewComInfo 0 --YES
+ViewComInfo '书法社' --YES
 GO
-ViewComInfo 1 --YES
+ViewComInfo '剑道社' --YES
 GO
-viewComInfo 2 --YES
+viewComInfo '影视鉴赏社' --YES
 GO
+ShowSelfInfo --YES
+GO
+ApplyjoinCom '2016010021','剑道社','想成为剑士' --YES
+GO
+ApplyjoinCom '2016010021','剑道社','想成为剑士1' --已经申请过，错误提示--YES
+GO
+verifyUser '2016010002' ,'123456' --NO
+GO
+setPasswd '2016010002' ,'123456','123456' --NO
+GO
+setTelNum '2016010002','18724787072' --YES
+GO
+ShowSelfInfo '2016010002' --YES
+GO
+ShowUnApprovalStu '2016010015','剑道社' --YES
+GO
+PermitStu '2016010015','2016010021','剑道社' --YES
+GO
+ShowApprovalStu '2016010015','剑道社' --YES
+GO
+QuitCom '2016010021','剑道社','太累' --YES
+
+
+
 
 
 

@@ -42,7 +42,8 @@ CREATE TABLE [dbo].[退会成员](
 	[学号] [nvarchar](12) NOT NULL,
 	[社团名称] [nvarchar](20) NOT NULL,
 	[退出时间] [datetime] NOT NULL,
-	[联系方式] [text] NULL
+	[联系方式] [text] NULL,
+	退出说明 [text] NULL,
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 
 

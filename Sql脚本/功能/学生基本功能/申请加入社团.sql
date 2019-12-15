@@ -2,7 +2,7 @@ use MSCSC
 go
 
 --申请加入社团功能
-Create Proc  ApplyJoinCommunity
+ALter Proc  ApplyJoinCom
 @StuNo nvarchar(12),
 @ComName nvarchar(20),
 @加入说明 text
@@ -11,8 +11,8 @@ BEGIN
     --返回信息
     Declare @Msg nvarchar(20)
     Declare @Count int
-    Select COUNT(*) from 待审核社团成员 
-    Where 学号 = @StuNo AND 社团名称 = @ComName AND 是否通过 = 'FALSE'
+    Select @Count = COUNT(*) from 待审核社团成员 
+    Where 学号 = @StuNo AND 社团名称 = @ComName
     --如果之前该学号有过向该社团ID提交申请
     IF @Count > 0
     BEGIN

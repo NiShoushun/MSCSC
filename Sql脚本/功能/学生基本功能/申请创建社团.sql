@@ -1,7 +1,6 @@
 USE MSCSC
-
 go
-
+--申请加入社团
 CREATE PROC ApplyToCreateCom
 @StuNo nvarchar(12),
 @ConName nvarchar(20),
