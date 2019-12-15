@@ -63,5 +63,5 @@ CREATE TABLE [dbo].[待审核社团成员](
 
 CREATE TABLE [dbo].[登陆表](
 	[学号] [nvarchar](10) NOT NULL,
-	[密码] [nvarchar](32) NOT NULL
+	[密码] [varchar](40) NOT NULL
 ) ON [PRIMARY]

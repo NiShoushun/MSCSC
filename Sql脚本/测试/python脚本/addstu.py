@@ -1,3 +1,4 @@
+
 import random
 
 
@@ -16,6 +17,7 @@ def 学生产生器():
             name = names.readline().split('\n')[0]
             if name == '':
                 continue
+            name = name.replace(r'[' ']+','')
             总人数 -= 1
             年级序号 = random.randint(0,3)
             院系序号 = random.randint(0,4)
@@ -32,10 +34,13 @@ def 学生产生器():
 
 if __name__ == '__main__':
     gen = 学生产生器()
-    while True:
-        try:
-            学生元组 = next(gen)
-            print('insert into 学生 values'+str(学生元组))
-        except StopIteration:
-            print('finish')
-            break
+    with open('添加数据.sql','w') as sql:
+        while True:
+            try:
+                学生元组 = next(gen)
+                print('insert into 学生 values'+str(学生元组))
+                sql.write('insert into 学生 values'+str(学生元组)+'\n')
+                sql.flush()
+            except StopIteration:
+                print('finish')
+                break
