@@ -1,7 +1,7 @@
 USE MSCSC
 GO
 
-CREATE PROC AsAdmin
+Alter PROC AsAdmin
 @StuNO NVARCHAR(12),
 @ComName NVARCHAR(20)
 AS
@@ -10,7 +10,7 @@ BEGIN
     DECLARE @Count INT
     --查询该社团成员是否存在
     SELECT @Count = COUNT(*) FROM 社团成员 
-    WHERE 社团名称 = @ComName AND 学号 = @StuNo AND 权限 != 'admin'
+    WHERE 社团名称 = @ComName AND 学号 = @StuNo
     IF @Count = 1
     BEGIN
         DECLARE @AdCount INT

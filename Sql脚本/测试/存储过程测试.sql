@@ -57,6 +57,12 @@ GO
 ShowApprovalStu '2016010015','剑道社' --YES
 GO
 QuitCom '2016010021','剑道社','太累' --YES
+GO
+GO
+KAdmin '2016010015','剑道社'
+GO
+AsAdmin '2016010015','剑道社'
+
 
 
 
