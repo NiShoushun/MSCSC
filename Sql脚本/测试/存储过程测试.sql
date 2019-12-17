@@ -72,11 +72,20 @@ ShowOutMem '2016010015','剑道社'
 GO
 DelCom '影视鉴赏社'
 
+GO
 
 
+APPLYtoCreateCom '2016010002','舞蹈社' ,'跳舞'
 
+ShowCC '2016010002'
 
+PermitCom '舞蹈社'
+ApplyjoinCom '2018010003','舞蹈社','想跳舞'
+ShowUnApprovalStu '2016010002','舞蹈社'
 
-
-
-
+permitStu '2016010002','2018010003','学习社'
+Kadmin '2016010002' ,'舞蹈社'
+ViewCominfo '舞蹈社'
+Asadmin '2016010002' ,'舞蹈社'
+QuitCOm '2018010003','舞蹈社','跳累了'
+ShowOutMem '2016010002','舞蹈社'

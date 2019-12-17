@@ -2,7 +2,7 @@ USE MSCSC
 go
 
 --学生修改密码
-CREATE PROC SetPasswd
+Alter PROC SetPasswd
     @StuNo NVARCHAR(12),    --学号
     @OldPW VARCHAR(32),    --旧密码
     @NewPW VARCHAR(32)     --新密码
@@ -12,6 +12,7 @@ BEGIN
     DECLARE @TruePW VARCHAR(32)
     SELECT @TruePW = 密码 FROM 登陆表 WHERE 学号 = @StuNo
     --先比较旧密码是否正确，再进行修改
+    SELECT HashBytes('MD5',@OldPW),@TruePW
     IF @TruePW = HashBytes('MD5',@OldPW)
     BEGIN
         UPDATE 登陆表 SET 密码 = HashBytes('MD5',@NewPW) WHERE 学号 = @StuNo

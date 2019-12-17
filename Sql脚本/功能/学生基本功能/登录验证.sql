@@ -8,7 +8,8 @@ ALTER PROC VerifyUser
 AS
 BEGIN
     DECLARE @Result BIT
-    SELECT @Result = COUNT(*) from 登陆表 Where 密码 = HASHBYTES('MD5',@Password)
+    SELECT @Result = COUNT(*) from 登陆表 
+    Where 密码 = HASHBYTES('MD5',@Password) AND 学号 = @StuInfo
     SELECT @Result AS '验证结果'
 END
     
