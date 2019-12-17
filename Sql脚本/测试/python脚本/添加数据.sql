@@ -306,5 +306,7 @@ select 院系,count(*) from 学生
 group by 院系
 
 select 年级,count(*) from 学生
-group by 年级
+group by 年级 having count(*) > 60
 
+SELECT 性别,count(*) as 人数 from 学生
+group by  性别
