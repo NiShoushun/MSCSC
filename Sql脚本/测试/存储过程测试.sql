@@ -68,6 +68,8 @@ GO
 AsAdmin '2016010015','剑道社'
 GO
 ShowOutMem '2016010015','剑道社'
+GO
+DELCom '影视鉴赏社'
 
 
 

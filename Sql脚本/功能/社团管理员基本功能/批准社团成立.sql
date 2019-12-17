@@ -1,7 +1,7 @@
 USE MSCSC
 GO
 
-CREATE PROC PermitCom
+ALter PROC PermitCom
 @ComName NVARCHAR(10)
 AS
 BEGIN
