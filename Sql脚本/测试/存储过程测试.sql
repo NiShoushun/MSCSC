@@ -38,7 +38,7 @@ viewComInfo '影视鉴赏社' --YES
 GO
 ShowSelfInfo --YES
 GO
-ApplyjoinCom '2016010021','剑道社','想成为剑士' --YES
+ApplyjoinCom '2016010002','剑道社','想成为剑士' --YES
 GO
 ApplyjoinCom '2016010021','剑道社','想成为剑士1' --已经申请过，错误提示--YES
 GO
@@ -52,16 +52,22 @@ ShowSelfInfo '2016010002' --YES
 GO
 ShowUnApprovalStu '2016010015','剑道社' --YES
 GO
-PermitStu '2016010015','2016010021','剑道社' --YES
+PermitStu '2016010015','2016010002','剑道社' --YES
+GO
+ShowACInfo '2016010021'
+GO
+SHowCC '2016010015'
 GO
 ShowApprovalStu '2016010015','剑道社' --YES
 GO
-QuitCom '2016010021','剑道社','太累' --YES
+QuitCom '2016010002','剑道社','太累' --YES
 GO
 GO
 KAdmin '2016010015','剑道社'
 GO
 AsAdmin '2016010015','剑道社'
+GO
+ShowOutMem '2016010015','剑道社'
 
 
 
