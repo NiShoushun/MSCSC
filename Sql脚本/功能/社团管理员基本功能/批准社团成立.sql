@@ -1,7 +1,7 @@
 USE MSCSC
 GO
 
-ALter PROC PermitCom
+CREATE PROC [dbo].[PermitCom]
 @ComName NVARCHAR(10)
 AS
 BEGIN
@@ -28,3 +28,4 @@ BEGIN
     END
     SELECT @Msg '系统信息'
 END
+GO

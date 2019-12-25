@@ -1,4 +1,7 @@
-CREATE PROC ShowOutMem
+USE MSCSC
+GO
+
+CREATE PROC [dbo].[ShowOutMem]
 @AdminNo NVARCHAR(12),
 @ComName NVARCHAR(20)
 AS
@@ -18,3 +21,4 @@ BEGIN
         SELECT @Msg '系统通知'
     END
 END
+GO

@@ -2,7 +2,7 @@ USE MSCSC
 GO
 
 --输入学号+社团ID 判断权限是否为‘admin’ ,返回bit
-CREATE FUNCTION IsAdmin(@StuNo NVARCHAR(12),@ComName NVARCHAR(20))
+CREATE FUNCTION [dbo].[IsAdmin](@StuNo NVARCHAR(12),@ComName NVARCHAR(20))
 RETURNS BIT
 AS
 BEGIN
@@ -15,5 +15,7 @@ BEGIN
         SET @IsAdmin = 'True'
     RETURN @IsAdmin
 END
+GO
+
 
 

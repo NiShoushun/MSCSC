@@ -1,8 +1,8 @@
 USE MSCSC
 GO
 --退出社团时将退出信息插入到退会成员表，且删除申请加入社团记录
-CREATE TRIGGER DelComMember
-ON 社团成员
+CREATE TRIGGER [dbo].[DelComMember]
+ON [dbo].[社团成员]
 AFTER DELETE
 AS
 BEGIN

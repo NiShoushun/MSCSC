@@ -1,7 +1,7 @@
 USE MSCSC
 GO
 
-ALTER PROC ShowApprovalStu
+CREATE PROC [dbo].[ShowApprovalStu]
     @AdminNO NVARCHAR(12),
     @ComName NVARCHAR(20)
 AS
@@ -27,7 +27,8 @@ BEGIN
 END
 GO
 
-ALTER PROC ShowUnApprovalStu
+
+CREATE PROC [dbo].[ShowUnApprovalStu]
     @AdminNO NVARCHAR(12),
     @ComName NVARCHAR(20)
 AS

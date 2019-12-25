@@ -2,7 +2,7 @@ use MSCSC
 go
 
 --申请加入社团功能
-ALter Proc  ApplyJoinCom
+CREATE Proc  [dbo].[ApplyJoinCom]
 @StuNo nvarchar(12),
 @ComName nvarchar(20),
 @加入说明 text
@@ -28,6 +28,7 @@ BEGIN
     END
     Select @Msg 返回信息
 END
+GO
 
 
 

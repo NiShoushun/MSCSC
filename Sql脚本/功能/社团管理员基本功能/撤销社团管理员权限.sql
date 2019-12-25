@@ -1,7 +1,8 @@
 USE MSCSC
 GO
 
-CREATE PROC KAdmin
+--撤销管理员权限
+CREATE PROC [dbo].[KAdmin]
 @StuNO NVARCHAR(10),
 @ComName NVARCHAR(20)
 AS
@@ -22,3 +23,4 @@ BEGIN
     END
         Select @Msg '系统通知'
 END
+GO

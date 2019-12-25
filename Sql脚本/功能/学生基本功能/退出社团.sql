@@ -2,7 +2,7 @@
 use MSCSC
 go
 
-CREATE Proc QuitCom
+CREATE Proc [dbo].[QuitCom]
 @StuNo nvarchar(12),
 @ComName nvarchar(20),
 @QuitInfo Text
@@ -30,3 +30,4 @@ BEGIN
     END
     Select @Msg '系统通知'
 END
+GO

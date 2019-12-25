@@ -1,8 +1,8 @@
 USE MSCSC
 GO
 --加入社团时将社团当前人数+1
-CREATE TRIGGER InsertComMember
-ON 社团成员
+CREATE TRIGGER [dbo].[InsertComMember]
+ON [dbo].[社团成员]
 AFTER DELETE
 AS
 BEGIN

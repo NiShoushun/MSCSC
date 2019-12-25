@@ -1,8 +1,8 @@
 USE MSCSC
 GO
 --删除社团时将退会成员表，成员表中有关该社团记录一并删除
-CREATE TRIGGER DeleteCom
-ON 社团
+CREATE TRIGGER [dbo].[DeleteCom]
+ON [dbo].[社团]
 AFTER DELETE
 AS
 BEGIN

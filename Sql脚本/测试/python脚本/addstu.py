@@ -11,6 +11,7 @@ def 学生产生器():
     年龄 = [19,20,21,22]
     性别 = ['男','女']
     总人数 = 1000
+
     with open('names.txt','r') as names:
         name = 'init'
         while 总人数 > 0:

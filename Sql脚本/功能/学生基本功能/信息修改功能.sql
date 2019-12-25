@@ -2,7 +2,7 @@ USE MSCSC
 go
 
 --学生修改密码
-Alter PROC SetPasswd
+CREATE PROC [dbo].[SetPasswd]
     @StuNo NVARCHAR(12),    --学号
     @OldPW VARCHAR(32),    --旧密码
     @NewPW VARCHAR(32)     --新密码
@@ -24,11 +24,13 @@ BEGIN
     END
     SELECT @MSG '系统通知'
 END
+GO
+
 
 go
 
 --学生修改电话号码
-Create PROC SetTelnum
+Create PROC [dbo].[SetTelnum]
     @StuNo NVARCHAR(10),    --学号
     @Telnum NVARCHAR(12)    --电话号码
 AS
@@ -38,4 +40,6 @@ BEGIN
     SET @Msg = '修改成功'
     SELECT @MSG '返回信息'
 END
+GO
+
 

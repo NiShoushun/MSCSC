@@ -2,7 +2,7 @@ USE MSCSC
 GO
 
 --批准学生加入社团
-CREATE Proc PermitStu 
+CREATE Proc [dbo].[PermitStu] 
 @AdminNo NVARCHAR(12),
 @StuNo NVARCHAR(12),
 @ComName NVARCHAR(20)
@@ -44,4 +44,5 @@ BEGIN
     SELECT @Msg '系统通知'
 END
 GO
+
 

@@ -1,7 +1,7 @@
 USE MSCSC
 GO
 
-Alter PROC AsAdmin
+CREATE PROC [dbo].[AsAdmin]
 @StuNO NVARCHAR(12),
 @ComName NVARCHAR(20)
 AS
@@ -33,3 +33,4 @@ BEGIN
     END
     Select @Msg '系统通知'
 END
+GO

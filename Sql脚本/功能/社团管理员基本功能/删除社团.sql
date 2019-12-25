@@ -1,7 +1,7 @@
 USE MSCSC
 GO
 
-CREATE PROC DelCom
+CREATE PROC [dbo].[DelCom]
 @ComName NVARCHAR(10)
 AS
 BEGIN
@@ -23,3 +23,4 @@ BEGIN
     END
     SELECT @Msg '系统信息'
 END
+GO
